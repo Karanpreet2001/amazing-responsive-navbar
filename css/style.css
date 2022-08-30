@@ -10,6 +10,12 @@
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+
 }
 
 .header{
@@ -27,6 +33,7 @@ html{
         padding: 0.4rem;
         color: aliceblue;
         border-radius: 1rem;
+        cursor: pointer;
 }
 .navbar-list{
     display: flex;
@@ -68,3 +75,96 @@ html{
 .section-hero p, .section-services p{
     font-size: 2.2rem;
 }
+
+.mobile-navbar-button{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.mobile-nav-icon{
+    width: 3rem;
+    height: 3rem;
+    color: #212529;
+}
+
+.mobile-nav-icon[name="close-outline"]{
+    display: none;
+}
+
+
+
+/* Responsive */
+/* 980px */
+
+@media(max-width: 980px){
+    .mobile-navbar-button{
+        display: block;
+        z-index: 999;
+        border: 2px solid #212529;
+    }
+
+    .header .logo{
+        font-size: 1.8em;
+    }
+    .header{
+        padding: 0 2rem;
+        position: relative;
+    }
+    .navbar{
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background: #e7f5ff;
+        position: absolute;
+        top: 0;
+        left: 0%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        /* getting transition */
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+    }
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-button 
+    .mobile-nav-icon[name = "close-outline"]{
+            display: block;
+    }
+
+    .active .mobile-navbar-button 
+    .mobile-nav-icon[name = "menu-outline"]{
+            display: none;
+    }
+}
+
+@media(max-width: 560px){
+
+    .header{
+        padding: 1 2.4rem
+    }
+}
+
+
+
