@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: "Work Sans", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.header{
+        padding: 0 4.5rem;
+        height: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e7f5ff;
+
+}
+.header .logo{
+        font-size: 2.5rem;
+        background-color:black;
+        padding: 0.4rem;
+        color: aliceblue;
+        border-radius: 1rem;
+}
+.navbar-list{
+    display: flex;
+    gap: 4.3rem;
+    list-style: none;
+
+}
+.navbar-link:link, .navbar-link:visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #212529;
+    transition: all 0.3s;
+}
+.navbar-link:hover, .navbar-link:active{
+    color: #364fc7;
+
+}
+
+
+
+
+.section-hero, .section-services{
+    padding: 9.6rem , 0;
+    background-color: #a5d8ff;
+    height: 60vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-services{
+    background-color: #dee6ed;
+
+}
+
+.section-hero p, .section-services p{
+    font-size: 2.2rem;
+}
